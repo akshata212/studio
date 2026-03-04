@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -24,7 +23,7 @@ export function HeroSlider() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {slides.map((slide, index) => (
+      {slides.length > 0 ? slides.map((slide, index) => (
         <div
           key={slide.id}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
@@ -41,7 +40,9 @@ export function HeroSlider() {
             data-ai-hint={slide.imageHint}
           />
         </div>
-      ))}
+      )) : (
+        <div className="absolute inset-0 bg-muted" />
+      )}
 
       <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
         <h1 className="text-white text-5xl md:text-7xl font-headline font-extrabold mb-6 tracking-tight drop-shadow-2xl animate-fade-in-up">
@@ -51,10 +52,10 @@ export function HeroSlider() {
           Professional photography services that bring your vision to life with vibrant colors and artistic precision.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
-          <Button asChild size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-white px-10 h-14 text-lg">
+          <Button asChild size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-white px-10 h-14 text-lg shadow-xl shadow-accent/20">
             <Link href="/booking">Book Your Shoot</Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="rounded-full text-white border-white hover:bg-white/10 px-10 h-14 text-lg">
+          <Button asChild size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 text-white px-10 h-14 text-lg shadow-xl shadow-secondary/20 border-none">
             <Link href="/portfolio">View Portfolio</Link>
           </Button>
         </div>

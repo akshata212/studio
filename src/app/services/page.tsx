@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -56,7 +55,7 @@ export default function ServicesPage() {
       id: 'event',
       title: 'Event Photography',
       icon: <Camera className="w-10 h-10" />,
-      price: 'Custom Quote',
+      price: 'Starting from ₹20,000',
       description: 'Professional coverage for corporate events, galas, and community gatherings.',
       features: ['Fast delivery', 'Online gallery for guests', 'Commercial usage rights', 'On-site printing option'],
       color: 'bg-accent'

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,19 +10,19 @@ export function ServicesPreview() {
       id: 'wedding',
       title: 'Wedding Photography',
       desc: 'Capture the magic of your special day with our cinematic approach.',
-      img: PlaceHolderImages.find(img => img.id === 'service-wedding')?.imageUrl || ''
+      img: PlaceHolderImages.find(img => img.id === 'service-wedding')?.imageUrl || 'https://picsum.photos/seed/default-wedding/800/600'
     },
     {
       id: 'maternity',
       title: 'Maternity Shoot',
       desc: 'Celebrate the beautiful journey of motherhood with elegant portraits.',
-      img: PlaceHolderImages.find(img => img.id === 'service-maternity')?.imageUrl || ''
+      img: PlaceHolderImages.find(img => img.id === 'service-maternity')?.imageUrl || 'https://picsum.photos/seed/default-maternity/800/600'
     },
     {
       id: 'baby',
       title: 'Baby Photography',
       desc: 'Precious moments of your little ones captured forever.',
-      img: PlaceHolderImages.find(img => img.id === 'service-baby')?.imageUrl || ''
+      img: PlaceHolderImages.find(img => img.id === 'service-baby')?.imageUrl || 'https://picsum.photos/seed/default-baby/800/600'
     }
   ];
 
