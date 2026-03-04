@@ -38,22 +38,76 @@
       "imageHint": "newborn baby"
     },
     {
-      "id": "portfolio-1",
-      "description": "Golden Hour Portrait",
-      "imageUrl": "https://picsum.photos/seed/port1/600/800",
-      "imageHint": "portrait photography"
+      "id": "port-wedding-1",
+      "description": "Royal Wedding Ceremony",
+      "imageUrl": "https://picsum.photos/seed/w1/800/600",
+      "imageHint": "wedding ceremony"
     },
     {
-      "id": "portfolio-2",
-      "description": "Urban Style Shoot",
-      "imageUrl": "https://picsum.photos/seed/port2/600/800",
-      "imageHint": "fashion street"
+      "id": "port-motion-1",
+      "description": "Cinematic Drone Shot",
+      "imageUrl": "https://picsum.photos/seed/m1/800/1000",
+      "imageHint": "motion video"
     },
     {
-      "id": "portfolio-3",
-      "description": "Event Atmosphere",
-      "imageUrl": "https://picsum.photos/seed/port3/800/600",
-      "imageHint": "event party"
+      "id": "port-video-1",
+      "description": "Interview Production",
+      "imageUrl": "https://picsum.photos/seed/v1/1000/700",
+      "imageHint": "video production"
+    },
+    {
+      "id": "port-graphics-1",
+      "description": "Brand Identity Design",
+      "imageUrl": "https://picsum.photos/seed/g1/800/600",
+      "imageHint": "graphic design"
+    },
+    {
+      "id": "port-thumb-1",
+      "description": "Viral YouTube Thumbnail",
+      "imageUrl": "https://picsum.photos/seed/t1/800/450",
+      "imageHint": "youtube thumbnail"
+    },
+    {
+      "id": "port-podcast-1",
+      "description": "Studio Podcast Session",
+      "imageUrl": "https://picsum.photos/seed/pod1/800/600",
+      "imageHint": "podcast studio"
+    },
+    {
+      "id": "port-wedding-2",
+      "description": "Reception Toast",
+      "imageUrl": "https://picsum.photos/seed/w2/800/600",
+      "imageHint": "wedding reception"
+    },
+    {
+      "id": "port-motion-2",
+      "description": "VFX Motion Graphics",
+      "imageUrl": "https://picsum.photos/seed/m2/800/800",
+      "imageHint": "motion graphics"
+    },
+    {
+      "id": "port-video-2",
+      "description": "Short Film Still",
+      "imageUrl": "https://picsum.photos/seed/v2/800/600",
+      "imageHint": "short film"
+    },
+    {
+      "id": "port-graphics-2",
+      "description": "Abstract Digital Art",
+      "imageUrl": "https://picsum.photos/seed/g2/600/800",
+      "imageHint": "digital art"
+    },
+    {
+      "id": "port-thumb-2",
+      "description": "Gaming Thumbnail",
+      "imageUrl": "https://picsum.photos/seed/t2/800/450",
+      "imageHint": "gaming thumbnail"
+    },
+    {
+      "id": "port-podcast-2",
+      "description": "Audio Mixing Desk",
+      "imageUrl": "https://picsum.photos/seed/pod2/800/600",
+      "imageHint": "audio podcast"
     }
   ]
 }
