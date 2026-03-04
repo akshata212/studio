@@ -1,6 +1,5 @@
-
 import Link from 'next/link';
-import { Camera, Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Camera, Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -20,14 +19,11 @@ export function Footer() {
               Capturing timeless moments with creativity and passion. Our studio provides high-quality photography services tailored to your needs.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-primary transition-colors">
+              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-primary transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-primary transition-colors">
+              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-primary transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-primary transition-colors">
-                <Twitter size={20} />
               </a>
             </div>
           </div>
