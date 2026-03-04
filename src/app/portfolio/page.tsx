@@ -5,17 +5,24 @@ import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Play } from 'lucide-react';
 
 export default function PortfolioPage() {
   const [filter, setFilter] = useState('all');
+  const [activeVideo, setActiveVideo] = useState<{ title: string; url: string } | null>(null);
   
   const portfolioItems = useMemo(() => {
-    // Mapping placeholder images to portfolio items based on ID patterns
     return PlaceHolderImages.filter(img => img.id.startsWith('port-')).map(img => {
       let category = 'other';
-      if (img.id.includes('motion')) category = 'motion-video';
-      else if (img.id.includes('video')) category = 'video';
-      else if (img.id.includes('graphics')) category = 'graphics';
+      let isVideo = false;
+      if (img.id.includes('motion')) {
+        category = 'motion-video';
+        isVideo = true;
+      } else if (img.id.includes('video')) {
+        category = 'video';
+        isVideo = true;
+      } else if (img.id.includes('graphics')) category = 'graphics';
       else if (img.id.includes('thumb')) category = 'thumbnails';
       else if (img.id.includes('podcast')) category = 'podcasts';
       else if (img.id.includes('wedding')) category = 'wedding';
@@ -25,7 +32,10 @@ export default function PortfolioPage() {
         category,
         title: img.description,
         img: img.imageUrl,
-        hint: img.imageHint
+        hint: img.imageHint,
+        isVideo,
+        // Using a high-quality sample video for demonstration
+        videoUrl: isVideo ? 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' : null
       };
     });
   }, []);
@@ -43,6 +53,12 @@ export default function PortfolioPage() {
     { label: 'Podcasts', value: 'podcasts' },
     { label: 'Wedding', value: 'wedding' },
   ];
+
+  const handleItemClick = (item: typeof portfolioItems[0]) => {
+    if (item.isVideo && item.videoUrl) {
+      setActiveVideo({ title: item.title, url: item.videoUrl });
+    }
+  };
 
   return (
     <div className="pt-32 pb-24 min-h-screen">
@@ -70,7 +86,11 @@ export default function PortfolioPage() {
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {filteredItems.map((item) => (
-            <div key={item.id} className="relative group overflow-hidden rounded-3xl break-inside-avoid shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+            <div 
+              key={item.id} 
+              onClick={() => handleItemClick(item)}
+              className="relative group overflow-hidden rounded-3xl break-inside-avoid shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+            >
               <Image
                 src={item.img}
                 alt={item.title}
@@ -79,7 +99,16 @@ export default function PortfolioPage() {
                 className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
                 data-ai-hint={item.hint}
               />
+              
+              {/* Video Overlay Icon */}
+              {item.isVideo && (
+                <div className="absolute top-4 right-4 z-10 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                  <Play size={20} fill="currentColor" />
+                </div>
+              )}
+
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-white text-center">
+                {item.isVideo && <Play size={48} className="mb-4 text-primary animate-pulse" fill="currentColor" />}
                 <h3 className="text-2xl font-headline font-bold mb-2">{item.title}</h3>
                 <span className="bg-primary/80 px-4 py-1 rounded-full text-xs uppercase tracking-widest font-bold">
                   {item.category.replace('-', ' ')}
@@ -95,6 +124,27 @@ export default function PortfolioPage() {
           </div>
         )}
       </div>
+
+      {/* Video Playback Dialog */}
+      <Dialog open={!!activeVideo} onOpenChange={(open) => !open && setActiveVideo(null)}>
+        <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black border-none rounded-3xl">
+          <DialogHeader className="p-6 absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent">
+            <DialogTitle className="text-white font-headline text-xl">{activeVideo?.title}</DialogTitle>
+          </DialogHeader>
+          <div className="aspect-video w-full flex items-center justify-center">
+            {activeVideo && (
+              <video 
+                src={activeVideo.url} 
+                controls 
+                autoPlay 
+                className="w-full h-full"
+              >
+                Your browser does not support the video tag.
+              </video>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
