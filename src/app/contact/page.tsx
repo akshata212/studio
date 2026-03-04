@@ -19,8 +19,8 @@ export default function ContactPage() {
               <Phone size={32} />
             </div>
             <h3 className="text-2xl font-headline font-bold mb-4">Phone</h3>
-            <p className="text-muted-foreground mb-2">Mon-Fri: 9am to 6pm</p>
-            <p className="text-xl font-bold text-foreground">+1 (555) 123-4567</p>
+            <p className="text-muted-foreground mb-2">Mon-Sat: 10am to 8pm</p>
+            <p className="text-xl font-bold text-foreground">+91 9607655428</p>
           </div>
 
           <div className="glass p-10 rounded-[2.5rem] flex flex-col items-center text-center">
@@ -29,7 +29,7 @@ export default function ContactPage() {
             </div>
             <h3 className="text-2xl font-headline font-bold mb-4">Email</h3>
             <p className="text-muted-foreground mb-2">General inquiries</p>
-            <p className="text-xl font-bold text-foreground">hello@pixelstudio.com</p>
+            <p className="text-xl font-bold text-foreground">pixelstudio@gmail.com</p>
           </div>
 
           <div className="glass p-10 rounded-[2.5rem] flex flex-col items-center text-center">
@@ -38,7 +38,7 @@ export default function ContactPage() {
             </div>
             <h3 className="text-2xl font-headline font-bold mb-4">Studio Location</h3>
             <p className="text-muted-foreground mb-2">Visit us at</p>
-            <p className="text-xl font-bold text-foreground">123 Creative St, NY</p>
+            <p className="text-lg font-bold text-foreground px-4">A/P: Karve Tal: Walwa Dist: Sangali Maharashtra 415401</p>
           </div>
         </div>
 
@@ -47,8 +47,7 @@ export default function ContactPage() {
             <h2 className="text-3xl font-headline font-bold">Studio Working Hours</h2>
             <div className="space-y-4">
               {[
-                { day: 'Monday - Friday', time: '9:00 AM - 7:00 PM' },
-                { day: 'Saturday', time: '10:00 AM - 6:00 PM' },
+                { day: 'Monday - Saturday', time: '10:00 AM - 8:00 PM' },
                 { day: 'Sunday', time: 'By Appointment Only' }
               ].map((item, i) => (
                 <div key={i} className="flex justify-between items-center p-6 bg-white rounded-2xl shadow-sm">
@@ -77,7 +76,7 @@ export default function ContactPage() {
 
           <div className="h-[500px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl relative">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617543813872!2d-73.98542848459392!3d40.74844077932857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1625066921312!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.378931135431!2d74.1923235!3d17.0232454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc17565457ef451%3A0x644c68832a8f331!2sKarve%2C%20Maharashtra%20415401!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Camera, Heart, Users, Calendar, Baby, PartyPopper, MessageCircle } from 'lucide-react';
 
 export default function ServicesPage() {
-  const whatsappNumber = '911234567890'; // Replace with actual business number
+  const whatsappNumber = '919607655428';
 
   const services = [
     {

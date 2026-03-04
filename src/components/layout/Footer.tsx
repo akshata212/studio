@@ -38,7 +38,7 @@ export function Footer() {
               <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
               <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
               <li><Link href="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
-              <li><Link href="/booking" className="hover:text-primary transition-colors">Booking</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -57,15 +57,15 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-secondary-foreground/70">
                 <MapPin className="text-primary shrink-0" size={20} />
-                <span>123 Studio Street, Creative District, NY 10001</span>
+                <span>A/P: Karve Tal: Walwa Dist: Sangali Maharashtra 415401</span>
               </li>
               <li className="flex gap-3 text-secondary-foreground/70">
                 <Phone className="text-primary shrink-0" size={20} />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 9607655428</span>
               </li>
               <li className="flex gap-3 text-secondary-foreground/70">
                 <Mail className="text-primary shrink-0" size={20} />
-                <span>hello@pixelstudio.com</span>
+                <span>pixelstudio@gmail.com</span>
               </li>
             </ul>
           </div>
