@@ -5,8 +5,9 @@ import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Play } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Play, X } from 'lucide-react';
 
 export default function PortfolioPage() {
   const [filter, setFilter] = useState('all');
@@ -143,6 +144,16 @@ export default function PortfolioPage() {
               </video>
             )}
           </div>
+          <DialogFooter className="p-4 bg-black/90 sm:justify-center">
+            <Button 
+              variant="outline" 
+              className="rounded-full border-white/20 text-white hover:bg-white/10"
+              onClick={() => setActiveVideo(null)}
+            >
+              <X className="mr-2 h-4 w-4" />
+              Close Video
+            </Button>
+          </DialogFooter>
         </DialogContent>
       </Dialog>
     </div>
