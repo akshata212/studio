@@ -9,6 +9,11 @@ import { WhatsAppButton } from '@/components/ui/whatsapp-button';
 export const metadata: Metadata = {
   title: 'PixelStudio | Premium Photography & Cinematography',
   description: 'PixelStudio captures your moments with elegance and vibrancy. Specializing in Weddings, Maternity, and Baby photography.',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({
