@@ -3,15 +3,19 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Camera, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  const logoData = PlaceHolderImages.find(img => img.id === 'site-logo');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,11 +40,26 @@ export function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="bg-primary p-2 rounded-lg text-primary-foreground">
-            <Camera size={24} />
-          </div>
-          <span className="font-headline font-bold text-2xl tracking-tight">
+        <Link href="/" className="flex items-center gap-3">
+          {logoData ? (
+            <div className="relative w-10 h-10 overflow-hidden rounded-lg">
+              <Image 
+                src={logoData.imageUrl} 
+                alt={logoData.description} 
+                fill 
+                className="object-contain"
+                data-ai-hint={logoData.imageHint}
+              />
+            </div>
+          ) : (
+            <div className="bg-primary p-2 rounded-lg text-primary-foreground">
+              <Camera size={24} />
+            </div>
+          )}
+          <span className={cn(
+            "font-headline font-bold text-2xl tracking-tight transition-colors",
+            scrolled ? "text-foreground" : "text-white"
+          )}>
             Pixel<span className="text-primary">Studio</span>
           </span>
         </Link>
@@ -53,20 +72,23 @@ export function Navbar() {
               href={link.href}
               className={cn(
                 'font-medium transition-colors hover:text-primary',
-                pathname === link.href ? 'text-primary' : 'text-foreground/80'
+                pathname === link.href ? 'text-primary' : (scrolled ? 'text-foreground/80' : 'text-white/90')
               )}
             >
               {link.name}
             </Link>
           ))}
-          <Button asChild variant="default" className="rounded-full px-6 bg-accent hover:bg-accent/90">
+          <Button asChild variant="default" className="rounded-full px-6 bg-accent hover:bg-accent/90 border-none">
             <Link href="/booking">Book Your Shoot</Link>
           </Button>
         </div>
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-foreground p-2"
+          className={cn(
+            "md:hidden p-2 transition-colors",
+            scrolled ? "text-foreground" : "text-white"
+          )}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}

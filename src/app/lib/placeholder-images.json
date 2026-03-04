@@ -2,6 +2,12 @@
 {
   "placeholderImages": [
     {
+      "id": "site-logo",
+      "description": "PixelStudio Logo",
+      "imageUrl": "/logo.png",
+      "imageHint": "studio logo"
+    },
+    {
       "id": "hero-1",
       "description": "Elegant Wedding Couple",
       "imageUrl": "/images/hero-1.jpg",
