@@ -11,7 +11,7 @@ export default function ServicesPage() {
       id: 'wedding',
       title: 'Wedding Photography',
       icon: <Heart className="w-10 h-10" />,
-      price: 'Starting from $2,500',
+      price: 'Starting from ₹45,000',
       description: 'Comprehensive coverage of your special day, from bridal prep to the final dance. We focus on candid moments and cinematic storytelling.',
       features: ['2 Photographers', 'High-Res Digital Gallery', 'Professional Retouching', 'Engagement Session included'],
       color: 'bg-primary'
@@ -20,7 +20,7 @@ export default function ServicesPage() {
       id: 'pre-wedding',
       title: 'Pre-Wedding Shoot',
       icon: <Users className="w-10 h-10" />,
-      price: 'Starting from $800',
+      price: 'Starting from ₹15,000',
       description: 'Creative and romantic shoots at stunning locations to celebrate your engagement.',
       features: ['Multi-location shoot', '3 Outfits permitted', 'Save-the-date video clip', 'Artistic color grading'],
       color: 'bg-secondary'
@@ -29,7 +29,7 @@ export default function ServicesPage() {
       id: 'birthday',
       title: 'Birthday Shoot',
       icon: <PartyPopper className="w-10 h-10" />,
-      price: 'Starting from $400',
+      price: 'Starting from ₹8,000',
       description: 'Capturing the joy and celebration of life milestones for all ages.',
       features: ['Themed setups', 'Candid celebration shots', 'Digital delivery in 48 hours', 'Print packages available'],
       color: 'bg-accent'
@@ -38,7 +38,7 @@ export default function ServicesPage() {
       id: 'maternity',
       title: 'Maternity Shoot',
       icon: <Calendar className="w-10 h-10" />,
-      price: 'Starting from $600',
+      price: 'Starting from ₹12,000',
       description: 'Ethereal and elegant photography celebrating the beauty of motherhood.',
       features: ['Studio or Outdoor', 'Gown rentals available', 'Husband & Siblings included', 'Soft-touch retouching'],
       color: 'bg-primary'
@@ -47,7 +47,7 @@ export default function ServicesPage() {
       id: 'baby',
       title: 'Baby Photography',
       icon: <Baby className="w-10 h-10" />,
-      price: 'Starting from $500',
+      price: 'Starting from ₹10,000',
       description: 'Newborn and infant photography in a safe, warm, and creative environment.',
       features: ['Safety certified photographer', 'Props and wraps provided', 'Home or Studio sessions', 'Milestone packages'],
       color: 'bg-secondary'
@@ -80,7 +80,7 @@ export default function ServicesPage() {
                 {service.icon}
               </div>
               <h3 className="text-3xl font-headline font-bold mb-4">{service.title}</h3>
-              <p className="text-primary font-bold mb-6">{service.price}</p>
+              <p className="text-primary font-bold mb-6 text-xl">{service.price}</p>
               <p className="text-muted-foreground mb-8 flex-grow leading-relaxed">
                 {service.description}
               </p>

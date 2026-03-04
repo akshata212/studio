@@ -49,7 +49,7 @@ export default function AdminDashboard() {
     { label: 'Pending Bookings', value: '12', color: 'text-primary' },
     { label: 'Completed Shoots', value: '45', color: 'text-secondary' },
     { label: 'New Inquiries', value: '8', color: 'text-accent' },
-    { label: 'Total Revenue', value: '$12,450', color: 'text-foreground' }
+    { label: 'Total Revenue', value: '₹1,24,500', color: 'text-foreground' }
   ];
 
   return (
