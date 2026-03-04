@@ -1,0 +1,59 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "Elegant Wedding Couple",
+      "imageUrl": "https://picsum.photos/seed/wedding1/1920/1080",
+      "imageHint": "wedding photography"
+    },
+    {
+      "id": "hero-2",
+      "description": "Professional Studio Portrait",
+      "imageUrl": "https://picsum.photos/seed/portrait1/1920/1080",
+      "imageHint": "studio portrait"
+    },
+    {
+      "id": "hero-3",
+      "description": "Maternity Celebration",
+      "imageUrl": "https://picsum.photos/seed/maternity1/1920/1080",
+      "imageHint": "maternity photoshoot"
+    },
+    {
+      "id": "service-wedding",
+      "description": "Wedding Photography Service",
+      "imageUrl": "https://picsum.photos/seed/wedding2/800/600",
+      "imageHint": "wedding couple"
+    },
+    {
+      "id": "service-maternity",
+      "description": "Maternity Photography Service",
+      "imageUrl": "https://picsum.photos/seed/maternity2/800/600",
+      "imageHint": "maternity woman"
+    },
+    {
+      "id": "service-baby",
+      "description": "Baby Photography Service",
+      "imageUrl": "https://picsum.photos/seed/baby1/800/600",
+      "imageHint": "newborn baby"
+    },
+    {
+      "id": "portfolio-1",
+      "description": "Golden Hour Portrait",
+      "imageUrl": "https://picsum.photos/seed/port1/600/800",
+      "imageHint": "portrait photography"
+    },
+    {
+      "id": "portfolio-2",
+      "description": "Urban Style Shoot",
+      "imageUrl": "https://picsum.photos/seed/port2/600/800",
+      "imageHint": "fashion street"
+    },
+    {
+      "id": "portfolio-3",
+      "description": "Event Atmosphere",
+      "imageUrl": "https://picsum.photos/seed/port3/800/600",
+      "imageHint": "event party"
+    }
+  ]
+}
