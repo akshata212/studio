@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -55,7 +56,7 @@ export function HeroSlider() {
           <Button asChild size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-white px-10 h-14 text-lg shadow-xl shadow-accent/20">
             <Link href="/booking">Book Your Shoot</Link>
           </Button>
-          <Button asChild size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 text-white px-10 h-14 text-lg shadow-xl shadow-secondary/20 border-none">
+          <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white px-10 h-14 text-lg shadow-xl shadow-primary/20 border-none">
             <Link href="/portfolio">View Portfolio</Link>
           </Button>
         </div>
