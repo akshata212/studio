@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useMemo } from 'react';
@@ -13,7 +14,9 @@ export default function PortfolioPage() {
   const [activeVideo, setActiveVideo] = useState<{ title: string; url: string } | null>(null);
   
   const portfolioItems = useMemo(() => {
-    return PlaceHolderImages.filter(img => img.id.startsWith('port-')).map(img => {
+    // Cast PlaceHolderImages to any to access the videoUrl property we added in the JSON
+    const images = PlaceHolderImages as any[];
+    return images.filter(img => img.id.startsWith('port-')).map(img => {
       let category = 'other';
       let isVideo = false;
       if (img.id.includes('motion')) {
@@ -34,8 +37,7 @@ export default function PortfolioPage() {
         img: img.imageUrl,
         hint: img.imageHint,
         isVideo,
-        // Using a high-quality sample video for demonstration
-        videoUrl: isVideo ? 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' : null
+        videoUrl: img.videoUrl || null
       };
     });
   }, []);
@@ -100,7 +102,6 @@ export default function PortfolioPage() {
                 data-ai-hint={item.hint}
               />
               
-              {/* Video Overlay Icon */}
               {item.isVideo && (
                 <div className="absolute top-4 right-4 z-10 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
                   <Play size={20} fill="currentColor" />
@@ -125,10 +126,8 @@ export default function PortfolioPage() {
         )}
       </div>
 
-      {/* Video Playback Dialog */}
       <Dialog open={!!activeVideo} onOpenChange={(open) => !open && setActiveVideo(null)}>
         <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black border-none rounded-3xl group">
-          {/* Explicit Cross Button on Top Right */}
           <button 
             onClick={() => setActiveVideo(null)}
             className="absolute right-6 top-6 z-[60] bg-black/60 backdrop-blur-lg text-white p-2.5 rounded-full hover:bg-primary transition-all shadow-2xl border border-white/20"

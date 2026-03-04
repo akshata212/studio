@@ -4,109 +4,113 @@
     {
       "id": "hero-1",
       "description": "Elegant Wedding Couple",
-      "imageUrl": "https://picsum.photos/seed/wedding1/1920/1080",
+      "imageUrl": "/images/hero-1.jpg",
       "imageHint": "wedding photography"
     },
     {
       "id": "hero-2",
       "description": "Professional Studio Portrait",
-      "imageUrl": "https://picsum.photos/seed/portrait1/1920/1080",
+      "imageUrl": "/images/hero-2.jpg",
       "imageHint": "studio portrait"
     },
     {
       "id": "hero-3",
       "description": "Maternity Celebration",
-      "imageUrl": "https://picsum.photos/seed/maternity1/1920/1080",
+      "imageUrl": "/images/hero-3.jpg",
       "imageHint": "maternity photoshoot"
     },
     {
       "id": "service-wedding",
       "description": "Wedding Photography Service",
-      "imageUrl": "https://picsum.photos/seed/wedding2/800/600",
+      "imageUrl": "/images/service-wedding.jpg",
       "imageHint": "wedding couple"
     },
     {
       "id": "service-maternity",
       "description": "Maternity Photography Service",
-      "imageUrl": "https://picsum.photos/seed/maternity2/800/600",
+      "imageUrl": "/images/service-maternity.jpg",
       "imageHint": "maternity woman"
     },
     {
       "id": "service-baby",
       "description": "Baby Photography Service",
-      "imageUrl": "https://picsum.photos/seed/baby1/800/600",
+      "imageUrl": "/images/service-baby.jpg",
       "imageHint": "newborn baby"
     },
     {
       "id": "port-wedding-1",
       "description": "Royal Wedding Ceremony",
-      "imageUrl": "https://picsum.photos/seed/w1/800/600",
+      "imageUrl": "/images/wedding-1.jpg",
       "imageHint": "wedding ceremony"
     },
     {
       "id": "port-motion-1",
       "description": "Cinematic Drone Shot",
-      "imageUrl": "https://picsum.photos/seed/m1/800/1000",
+      "imageUrl": "/images/motion-1-thumb.jpg",
+      "videoUrl": "/videos/motion-1.mp4",
       "imageHint": "motion video"
     },
     {
       "id": "port-video-1",
-      "description": "Interview Production",
-      "imageUrl": "https://picsum.photos/seed/v1/1000/700",
+      "description": "Studio Production",
+      "imageUrl": "/images/video-1-thumb.jpg",
+      "videoUrl": "/videos/video-1.mp4",
       "imageHint": "video production"
     },
     {
       "id": "port-graphics-1",
-      "description": "Brand Identity Design",
-      "imageUrl": "https://picsum.photos/seed/g1/800/600",
+      "description": "Creative Poster Design",
+      "imageUrl": "/images/graphics-1.jpg",
       "imageHint": "graphic design"
     },
     {
       "id": "port-thumb-1",
       "description": "Viral YouTube Thumbnail",
-      "imageUrl": "https://picsum.photos/seed/t1/800/450",
+      "imageUrl": "/images/thumb-1.jpg",
       "imageHint": "youtube thumbnail"
     },
     {
       "id": "port-podcast-1",
       "description": "Studio Podcast Session",
-      "imageUrl": "https://picsum.photos/seed/pod1/800/600",
+      "imageUrl": "/images/podcast-1.jpg",
       "imageHint": "podcast studio"
     },
     {
       "id": "port-wedding-2",
       "description": "Reception Toast",
-      "imageUrl": "https://picsum.photos/seed/w2/800/600",
+      "imageUrl": "/images/wedding-2.jpg",
       "imageHint": "wedding reception"
     },
     {
       "id": "port-motion-2",
       "description": "VFX Motion Graphics",
-      "imageUrl": "https://picsum.photos/seed/m2/800/800",
+      "imageUrl": "/images/motion-2-thumb.jpg",
+      "videoUrl": "/videos/motion-2.mp4",
       "imageHint": "motion graphics"
     },
     {
       "id": "port-video-2",
       "description": "Short Film Still",
-      "imageUrl": "https://picsum.photos/seed/v2/800/600",
+      "imageUrl": "/images/video-2-thumb.jpg",
+      "videoUrl": "/videos/video-2.mp4",
       "imageHint": "short film"
     },
     {
       "id": "port-graphics-2",
-      "description": "Abstract Digital Art",
-      "imageUrl": "https://picsum.photos/seed/g2/600/800",
+      "description": "Digital Brand Identity",
+      "imageUrl": "/images/graphics-2.jpg",
       "imageHint": "digital art"
     },
     {
       "id": "port-thumb-2",
       "description": "Gaming Thumbnail",
-      "imageUrl": "https://picsum.photos/seed/t2/800/450",
+      "imageUrl": "/images/thumb-2.jpg",
       "imageHint": "gaming thumbnail"
     },
     {
       "id": "port-podcast-2",
-      "description": "Audio Mixing Desk",
-      "imageUrl": "https://picsum.photos/seed/pod2/800/600",
+      "description": "Audio Production Set",
+      "imageUrl": "/images/podcast-2.jpg",
       "imageHint": "audio podcast"
     }
   ]
