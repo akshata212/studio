@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useMemo } from 'react';
@@ -128,11 +127,21 @@ export default function PortfolioPage() {
 
       {/* Video Playback Dialog */}
       <Dialog open={!!activeVideo} onOpenChange={(open) => !open && setActiveVideo(null)}>
-        <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black border-none rounded-3xl">
-          <DialogHeader className="p-6 absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent">
-            <DialogTitle className="text-white font-headline text-xl">{activeVideo?.title}</DialogTitle>
+        <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black border-none rounded-3xl group">
+          {/* Explicit Cross Button on Top Right */}
+          <button 
+            onClick={() => setActiveVideo(null)}
+            className="absolute right-6 top-6 z-[60] bg-black/60 backdrop-blur-lg text-white p-2.5 rounded-full hover:bg-primary transition-all shadow-2xl border border-white/20"
+            aria-label="Close video"
+          >
+            <X size={24} />
+          </button>
+
+          <DialogHeader className="p-6 absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent pointer-events-none">
+            <DialogTitle className="text-white font-headline text-xl pr-12">{activeVideo?.title}</DialogTitle>
           </DialogHeader>
-          <div className="aspect-video w-full flex items-center justify-center">
+          
+          <div className="aspect-video w-full flex items-center justify-center bg-neutral-900">
             {activeVideo && (
               <video 
                 src={activeVideo.url} 
@@ -144,13 +153,13 @@ export default function PortfolioPage() {
               </video>
             )}
           </div>
+          
           <DialogFooter className="p-4 bg-black/90 sm:justify-center">
             <Button 
               variant="outline" 
               className="rounded-full border-white/20 text-white hover:bg-white/10"
               onClick={() => setActiveVideo(null)}
             >
-              <X className="mr-2 h-4 w-4" />
               Close Video
             </Button>
           </DialogFooter>
